@@ -1,6 +1,6 @@
-exports.run = (Discord, client, message, args, footer) => {
+exports.run = (Discord, client, message, args, footer, randomColor) => {
 
-    var randomColor = Math.floor(Math.random() * 16777215).toString(16); //Just gets a random color. Feel free to not put this, I just like it lol.
+ //Just gets a random color. Feel free to not put this, I just like it lol.
     
     var embedinfo = new Discord.RichEmbed() // Makes the embed so we can send it.
     
