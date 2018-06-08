@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = ".";
 const footer = "Made by Askreno2296 and TheReal#1781";
+const randomColor = Math.floor(Math.random() * 16777215).toString(16); 
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
