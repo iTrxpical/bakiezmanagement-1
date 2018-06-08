@@ -32,7 +32,7 @@ client.on('message', message => {
 
         try {
 
-            let commandFile = require(`./commands/${cmd}.js`);
+             let commandFile = require(`/commands/${cmd}.js`);
             commandFile.run(Discord, client, message, args, footer, randomColor);
 
         } catch (e) {
