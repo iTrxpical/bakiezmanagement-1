@@ -18,4 +18,8 @@ var fortunes = [
         .setColor(randomColor)
         .setFooter(footer)
     message.channel.sendEmbed(embed8)
+function clean(text) {
+    if (typeof(text) == "string")
+        return text.replace(/@/g, "@" + String.fromCharCode(8203))
+}
     }
