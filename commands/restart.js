@@ -1,6 +1,4 @@
-const Discord = require("discord.js")
-
-exports.run = (client, message, args) => {
+exports.run = (Discord, client, message, args, footer, randomColor) => {
     if(message.author.id === '178350684922576896') {
       message.channel.send('Restarted!');
       
