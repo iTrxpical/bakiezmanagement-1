@@ -1,5 +1,5 @@
 exports.run = (Discord, client, message, args, footer, randomColor) => {
-    var story = [
+    const story = [
         "`As I see it, yes`",
         "`It is certain`",
         "`Signs point to yes`",
