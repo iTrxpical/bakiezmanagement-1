@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const prefix = ".";
 const footer = "Made by Askreno2296 and TheReal#1781";
 const randomColor = Math.floor(Math.random() * 16777215).toString(16); 
+const hook = new Discord.WebhookClient(process.env.HOOK_ID, process.env.HOOK_TOKEN);
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
@@ -32,7 +33,7 @@ client.on('message', message => {
         try {
 
             let commandFile = require(`./commands/${cmd}.js`);
-            commandFile.run(Discord, client, message, args, footer);
+            commandFile.run(Discord, client, message, args, footer, randomColor);
 
         } catch (e) {
 
@@ -40,7 +41,7 @@ client.on('message', message => {
 
         } finally {
 
-            console.log(`${message.author.username} ran the command: ${cmd} and is being passed onto the handler...!`);
+            console.log(`${message.author.username} ran the command: ${cmd} in ${message.channel.name} and it is being passed onto the handler...!`);
 
         }
 })
